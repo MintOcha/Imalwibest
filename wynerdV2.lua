@@ -18,7 +18,7 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 game:FindService('StarterGui'):SetCore('SendNotification', {
 			Title = 'Alwi Hub Notice',
 			Text = 'Purchase exloiting Working On codex,trigon,Arceusx thanks',
-			Icon = 'http://www.roblox.com/asset/?id=13398032599',
+			Icon = 'http://www.roproxy.com/asset/?id=13398032599',
 	}) 
 -- the code is extremely messy because something in the code editor fucked it up all at once and for some reason removed indents in some parts of the code while kept indents in some other parts of the code LOL
 local LOAD_TIME = tick()
@@ -135,7 +135,7 @@ end
 task.spawn(function()
     local discord = loadstring(game:HttpGet("https://raw.githubusercontent.com/Imalwibest/Imalwibest/main/Config%20wynerdV2.lua"))()
     local win = discord:Window("Wynerd 1.269.4 - redblues edition skided by Alwi hub")
-    local serv = win:Server("Wynerd", "http://www.roblox.com/asset/?id=6031075938")
+    local serv = win:Server("Wynerd", "http://www.roproxy.com/asset/?id=6031075938")
     local main = serv:Channel("Home")
     main:Label("\nThank you for using Wynerd!\nThe #2 UGC Games Penetration Testing Tool! (mine is still better)")
     main:Label("Check out the other Discord channels to see our available tools!")
@@ -260,7 +260,7 @@ task.spawn(function()
                                      tostring(game.Players.LocalPlayer.UserId) .. '}'
                                 print(data)
                                 -- setclipboard(data)
-                                _post("https://apis.roblox.com/marketplace-sales/v1/item/" .. tostring(info.CollectibleItemId) .."/purchase-item", data);
+                                _post("https://apis.roproxy.com/marketplace-sales/v1/item/" .. tostring(info.CollectibleItemId) .."/purchase-item", data);
                                 wait();
                                 local endTime = tick()
                                 local duration = endTime - startTime
@@ -395,13 +395,13 @@ task.spawn(function()
                     -- setclipboard(data)
                     if freecheck == true then
                         if info.PriceInRobux == 0 then
-                            _post("https://apis.roblox.com/marketplace-sales/v1/item/" ..
+                            _post("https://apis.roproxy.com/marketplace-sales/v1/item/" ..
                                       tostring(info.CollectibleItemId) .. "/purchase-item", data);
                             amountbought = amountbought + 1
                         end
                     else
                         _post(
-                            "https://apis.roblox.com/marketplace-sales/v1/item/" .. tostring(info.CollectibleItemId) ..
+                            "https://apis.roproxy.com/marketplace-sales/v1/item/" .. tostring(info.CollectibleItemId) ..
                                 "/purchase-item", data);
                         amountbought = amountbought + 1
                     end
@@ -619,7 +619,7 @@ task.spawn(function()
         Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
     end)
     games:Button("Teleport to Smallest Server", function()
-        local gameapi = "https://games.roblox.com/v1/games/"
+        local gameapi = "https://games.roproxy.com/v1/games/"
         local _place = game.PlaceId
         local _servers = gameapi .. _place .. "/servers/Public?sortOrder=Asc&limit=100"
         function ListServers(cursor)
@@ -917,7 +917,7 @@ task.spawn(function()
     end)
     local purchase = serv:Channel("Purchase Exploits")
     local x_x = HttpService:JSONDecode(game:HttpGet(
-        "https://apis.roblox.com/developer-products/v1/developer-products/list?universeId=" .. game.GameId .. "&page=1"))
+        "https://apis.roproxy.com/developer-products/v1/developer-products/list?universeId=" .. game.GameId .. "&page=1"))
     local dnames = {}
     local dproductIds = {}
     if type(x_x.DeveloperProducts) == "nil" then
@@ -930,7 +930,7 @@ task.spawn(function()
 
         repeat
             local response = game:HttpGet(
-                "https://apis.roblox.com/developer-products/v1/developer-products/list?universeId=" ..
+                "https://apis.roproxy.com/developer-products/v1/developer-products/list?universeId=" ..
                     tostring(game.GameId) .. "&page=" .. tostring(currentPage))
             local decodedResponse = HttpService:JSONDecode(response)
             local developerProducts = decodedResponse.DeveloperProducts
@@ -1025,7 +1025,7 @@ task.spawn(function()
     purchase:Seperator()
     purchase:Label("Pretty much the same as the one above but for gamepass")
     local wyverngamepass = game.HttpService:JSONDecode(game:HttpGet(
-        "https://games.roblox.com/v1/games/" .. game.GameId .. "/game-passes?limit=100&sortOrder=1"))
+        "https://games.roproxy.com/v1/games/" .. game.GameId .. "/game-passes?limit=100&sortOrder=1"))
     local gnames = {}
     local gproductIds = {}
     for i, v in pairs(wyverngamepass.data) do
